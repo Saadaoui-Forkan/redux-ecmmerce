@@ -1,0 +1,98 @@
+/* الحل في إضافة هذا العنص */
+/* ----------------------- */
+.slider-container {
+    background-color: var(--color-2); 
+    width: 100vw;
+    height: 90vh;
+}
+/* ----------------------- */
+.slider {
+    padding-top: 20px;
+    position: relative;
+}
+.slide {
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+}
+.slide-img {
+    max-width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.slide-img img {
+    width: 100%;
+    height: 100%;
+}
+.slide-text {
+    color: var(--color-2);
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.fa-circle-arrow-right {
+    color: var(--color-1);
+    font-size: 25px;
+    top: 40vh;
+    right: 15px;
+    position: absolute;
+    cursor: pointer;
+}
+.fa-circle-arrow-left {
+    color: var(--color-1);
+    font-size: 25px;
+    left: 15px;
+    position: absolute;
+    top: 40vh;
+    cursor: pointer;
+}
+.dots {
+    display: flex;
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dot{
+    width: 20px;
+    height: 5px;
+    background-color: var(--color-2);
+    margin: auto 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+}
+.active-dot{
+    opacity: 1;
+}
+
+/* responsive */
+@media (max-width:768px) {
+    .slider-container {
+        height: 60vh;
+    }
+    .slide {
+        height: 50vh;
+    }
+    .fa-circle-arrow-left{
+        top: 25vh;
+        color: var(--color-2);
+        left: 25px;
+    }
+    .fa-circle-arrow-right {
+        right: 25px;
+        top: 25vh;
+        color: var(--color-2);
+    }
+    .dots {
+        top: 45vh;
+    }
+    .slide-text {
+        font-size: 15px;
+    }
+}

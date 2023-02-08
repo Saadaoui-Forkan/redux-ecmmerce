@@ -1,0 +1,31 @@
+/* .logo {
+    height:70px;
+}
+.nav_link{
+    margin:auto 10px;
+    color: var(--color-1)!important;
+    text-align: center!important;
+}
+.nav_link:hover{
+    color: var(--color-3)!important;
+}
+.form-control:focus {
+    border-color: var(--color-1)!important; 
+    box-shadow: 0 0 0 !important; 
+}
+.form_btn{
+    background-color: var(--color-2)!important;
+    color: var(--color-1)!important;
+    border: 1px solid var(--color-1)!important;
+}
+.form_btn:hover{
+    background-color: var(--color-1)!important;
+    color: var(--color-2)!important;
+}
+.navbar-toggler {
+    border: none!important;
+    box-shadow: 0 0 0 !important; 
+}
+.form{
+    margin: auto!important;
+} */

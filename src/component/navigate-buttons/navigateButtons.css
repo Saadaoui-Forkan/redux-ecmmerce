@@ -1,0 +1,20 @@
+.nav-btns {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.nav-btn-wrapper {
+    margin: 10px;
+}
+.nav-btn {
+    font-weight: bold;
+    padding: 8px 10px;
+    border: none;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    cursor: pointer;
+}
+.nav-btn:hover {
+    transform: scale(1.2);
+}

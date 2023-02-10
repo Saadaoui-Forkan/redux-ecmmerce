@@ -1,0 +1,7 @@
+.modal {
+    display: block;
+    position: fixed!important;
+    top: 0!important;
+    left: 0!important;
+    background-color: rgba(0,0,0,0.7)!important;
+}

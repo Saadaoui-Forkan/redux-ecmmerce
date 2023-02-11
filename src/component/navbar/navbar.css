@@ -1,10 +1,12 @@
-/* .header {
+.header {
     position: fixed!important;
-    top: 0!important;
-    left: 0!important;
-    width: 100%!important;
-} */
-.logo {
+    top: 30px!important;
+    right: 70px!important;
+    font-size: 50px;
+    color: var(--color-3)!important;
+    z-index: 99;
+}
+/* .logo {
     height:70px;
 }
 .nav_link{
@@ -34,4 +36,4 @@
 }
 .form{
     margin: auto!important;
-}
+} */

@@ -7,10 +7,7 @@ import './Cart.css'
 function Cart({openModal,setOpenModal}) {
   const cart = useSelector(state=> state.cart.cart)
   const totalPrice = useSelector(state=> state.cart.totalPrice)
-  const amount = useSelector(state=> state.cart.amount)
-  console.log('cart',cart)
-  console.log('totalPrice',totalPrice)
-  console.log('amount',amount)
+  console.log(totalPrice)
   return (
     <div
       className="modal show cart"
@@ -20,10 +17,44 @@ function Cart({openModal,setOpenModal}) {
         <Modal.Header>
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
-
-        <Modal.Body>
-        </Modal.Body>
-
+        {
+          cart.length > 0 ?
+          (
+            <Modal.Body>
+              {
+                cart.map((item,index)=>(
+                  <div key={index}>
+                    <div className="product-card">
+                      <div className="product-card-img">
+                        <img src={item.img} alt={item.img} />
+                        <h4 className="product-card-info-name">{item.name}</h4>
+                      </div>
+                      <div className="product-card-info">
+                        <div className="product-card-info-color">
+                          <div>selected color:</div>
+                          <div className='selected-color' style={{backgroundColor:`${item.color}`}}></div>
+                        </div>
+                        <div className="product-card-info-color">
+                          selected size: {item.size}
+                        </div>
+                        <h4 className="product-card-info-amount">Amount: {item.amount}</h4>
+                        <h4 className="product-card-info-price">Single Item Price: {item.price}</h4>
+                        <h4 className="product-card-info-price">Total Item Price: {item.totalPrice}</h4>
+                        <div className="remove-product">
+                          <button>Remove</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+            </Modal.Body>
+          ) : (
+            <Modal.Body>
+              <h3 className='empty-bag'>Your bag is empty</h3>
+            </Modal.Body>
+          )
+        }
         <Modal.Footer>
           <Button 
             variant="secondary" 

@@ -26,7 +26,8 @@ function SingleProduct() {
       color: color,
       price: prod.price,
       amount: 1,
-      totalPrice: prod.price
+      totalPrice: prod.price,
+      img: prod.img,
     }))
   }
 

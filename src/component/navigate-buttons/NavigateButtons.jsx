@@ -7,7 +7,6 @@ import './navigateButtons.css'
 function NavigateButtons() {
 
     const buttons = [
-        "All",
         "Hoodies",
         "Dresses",
         "Suits",

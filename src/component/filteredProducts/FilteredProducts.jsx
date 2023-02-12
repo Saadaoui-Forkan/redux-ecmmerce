@@ -24,7 +24,7 @@ function FilteredProducts() {
       <div className="filtered-products-wrapper">
         {
             filteredProducts.map((prod,index) => (
-                <div className="product-card" key={index}>
+                <div className="single-product-card" key={index}>
                     <ProductCard
                         id     = {prod.id}
                         img    = {prod.img}

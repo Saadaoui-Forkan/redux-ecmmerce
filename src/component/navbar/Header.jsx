@@ -1,16 +1,14 @@
-// import Container from 'react-bootstrap/Container';
-// import Form from 'react-bootstrap/Form';
-// import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import logo from '../../assets/images/logo.png'
 import './navbar.css'
 import Cart from '../cart/Cart';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function Header() {
 
   const [openModal,setOpenModal] = useState(false)
+  const totalAmount = useSelector(state => state.cart.totalAmount)
+  console.log(totalAmount);
 
   return (
 
@@ -20,6 +18,9 @@ function Header() {
         className='nav_link'
       >
         <i className="fa-solid fa-cart-shopping"></i>
+        { 
+          totalAmount && (<div className="total-amount">{totalAmount}</div>)
+        }
       </Nav.Link>
       {
         openModal && 

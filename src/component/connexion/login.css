@@ -1,0 +1,13 @@
+.login {
+    width: 70%;
+    margin: 50px auto 5px;
+}
+.img-url {
+    margin-top: 15px!important;
+}
+
+@media (max-width:567px){
+    .login {
+        width: 90%;
+    }
+}

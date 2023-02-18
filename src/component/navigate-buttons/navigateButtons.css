@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
+    margin: 40px auto;
 }
 .nav-btn-wrapper {
     margin: 10px;

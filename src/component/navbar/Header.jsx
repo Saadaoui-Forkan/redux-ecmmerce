@@ -3,12 +3,14 @@ import './navbar.css'
 import Cart from '../cart/Cart';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
-  const [openModal,setOpenModal] = useState(false)
-  const totalAmount = useSelector(state => state.cart.totalAmount)
-  console.log(totalAmount);
+  const [openModal,setOpenModal] = useState(false);
+  const totalAmount = useSelector(state => state.cart.totalAmount);
+
+  const {name,image} = useSelector(state => state.user)
 
   return (
 
@@ -19,7 +21,7 @@ function Header() {
       >
         <i className="fa-solid fa-cart-shopping"></i>
         { 
-          totalAmount && (<div className="total-amount">{totalAmount}</div>)
+          totalAmount>0 && (<div className="total-amount">{totalAmount}</div>)
         }
       </Nav.Link>
       {
@@ -29,6 +31,10 @@ function Header() {
           setOpenModal={setOpenModal}
         />
       }
+      <Link to = '/login' className='logIn'>
+        <img src={image} alt='' />
+        <h3 className="login-link">{name}</h3>
+      </Link>
       </div>
   )
 }

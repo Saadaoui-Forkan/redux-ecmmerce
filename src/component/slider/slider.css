@@ -1,13 +1,10 @@
-/* الحل في إضافة هذا العنص */
-/* ----------------------- */
 .slider-container {
     background-color: var(--color-2); 
     width: 100vw;
     height: 90vh;
 }
-/* ----------------------- */
 .slider {
-    padding-top: 20px;
+    padding-top: 90px;
     position: relative;
 }
 .slide {

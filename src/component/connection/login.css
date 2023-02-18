@@ -1,9 +1,12 @@
 .login {
     width: 70%;
-    margin: 50px auto 5px;
+    margin: 90px auto 5px;
 }
 .img-url {
     margin-top: 15px!important;
+}
+.btn {
+    margin-top: 15px;
 }
 
 @media (max-width:567px){
